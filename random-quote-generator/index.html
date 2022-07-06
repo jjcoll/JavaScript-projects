@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quote Generator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="quote-container" id="quote-container">
+      <!--Quote element-->
+      <div class="quote-text">
+        <!-- <i class="fas fa-quote-left"></i> -->
+        &#8220;<span id="quote">I like to eat pizza it is delicious</span>&#8221;
+      </div>
+
+      <!--Author-->
+      <div class="quote-author">&#8211;
+        <span id="author"> Jacob</span>
+      </div>
+
+      <!--Buttons-->
+      <div class="button-container">
+        <button
+          class="twitter-button hover-underline-animation"
+          id="twitter"
+          title="Tweet this!"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+        <!-- <button class="hover-underline-animation" id="new-quote" title="Get a new quote!">New Quote</button> -->
+        <button
+          class="refresh-button hover-underline-animation"
+          id="refresh"
+          title="Get a new quote!"
+        >
+          <i class="fa-solid fa-arrow-rotate-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader"></div>
+
+    <!-- script  -->
+    <script src="script.js"></script>
+  </body>
+</html> 
