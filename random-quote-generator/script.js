@@ -25,7 +25,7 @@ function newQuote() {
 }
 
 
-function tweetQuote(quote, author) {
+function tweetQuote() {
   const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteTextIn.textContent} - ${authorTextIn.textContent}`
   window.open(twitterUrl, '_blank'); // open twitter on new window
 }
@@ -51,10 +51,11 @@ async function getQuotes() {
     const response = await fetch(apiUrl) // only set response when we have data
     apiQuotes = await response.json()
     newQuote()
-    console.log(apiQuotes)
   } catch (error) {
-    // Catch Error Here
-    console.log(error)
+    setTimeout(() => {
+      alert('an error ocurred retrying soon') 
+      getQuotes()
+    }, 3000)
   }
 }
 
@@ -71,6 +72,5 @@ quoteContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-twitter')) {
     console.log('ready to open twitter')
     tweetQuote()  
-
   }
 })
