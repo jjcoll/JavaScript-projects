@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --font-color: #212529;
+  --background-color: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+/* Loader */
+.loader {
+  margin: 100px auto;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #000000; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Image container */
+.image-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.pic-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pic--box {
+  position: relative;
+}
+
+.pic--box:hover {
+  cursor: pointer;
+}
+
+.pic--box:hover > .caption {
+  opacity: 1;
+}
+
+.caption {
+  transition: opacity 0.4s ease-in;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  background-color: rgb(30 30 30 / 50%);
+  width: 90%;
+  padding: 5%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+/* info button */
+.info-btn {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.opp--1 {
+  opacity: 1 !important;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  .image-container {
+    margin: 10px 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    margin: 10px;
+  }
+    
+  .pic--box:hover > .caption {
+    opacity: 0;
+  }
+
+  .info-btn {
+    opacity: 1;
+  }
+}
