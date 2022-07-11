@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+background-color: #FFC200;
+font-family: 'Indie Flower', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+/* Button */
+.btn { 
+  outline: 0;
+  border: 2px solid;
+  background:none;
+  margin:25px;
+  padding: 10px 35px;
+  font-size:15px;
+  font-family: 'Indie Flower', sans-serif;
+  color: black;
+  cursor:pointer;
+  border-radius:50px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffedb3;
+  border: 2px solid;
+  color: black;
+}
+
+.btn--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.jukebox {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Speach box */
+p {
+	position: relative;
+	max-width: 30em;
+	
+	background-color: #fff;
+	padding: 1.125em 1.5em;
+	font-size: 1.25em;
+	border-radius: 1rem;
+  /* box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2); */
+
+  position: absolute;
+  /* works for 600px */
+  top: 154px;
+  left: 195px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+p::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 100%;
+	right: 1.5em; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  
+  border-top: 20px solid white;
+	border-bottom-color: #fff;
+	/* filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1)); */
+}
