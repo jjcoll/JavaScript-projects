@@ -1,0 +1,201 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #f5f3f3;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+header {
+  padding: 20px;
+  background: white;
+  text-align: center;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 750px) {
+  header {
+    text-align: left;
+  }
+}
+.borrar-curso {
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#logo {
+  width: 100px;
+}
+
+.cart-icon {
+  font-size: 36px;
+}
+
+ul {
+  list-style: none;
+}
+#hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../img/hero-1.jpg);
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+#encabezado {
+  margin: 30px 0;
+}
+.submenu {
+  position: relative;
+  margin: 0;
+}
+
+.submenu #carrito {
+  display: none;
+}
+
+.cart {
+  margin: 0;
+}
+
+.submenu:hover > #carrito {
+  display: block;
+  position: absolute;
+  right: 0;
+
+  top: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
+}
+
+#carrito {
+  box-shadow: 0 0 0 1px #d1d7dc, 0 2px 4px rgb(0 0 0 / 8%),
+    0 4px 12px rgb(0 0 0 / 8%);
+}
+.vacio {
+  padding: 10px;
+  background-color: crimson;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+.contenido-hero {
+  margin-top: 80px;
+  color: white;
+}
+.contenido-hero form {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.course-searchbar {
+  color: #333;
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.search-icon {
+  font-size: 24px;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #FBC63D;
+}
+
+
+.barra {
+  padding: 20px 0;
+  background: #741d51; /* Old browsers */
+  background: linear-gradient(to right, #605332 0%, #fdc83d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+}
+
+.page-benefit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.benefit-icon {
+  font-size: 3.2rem;
+  color: white;
+}
+
+.barra p {
+  margin: 0;
+  color: white;
+}
+
+#lista-cursos .row {
+  margin-bottom: 20px;
+}
+.agregar-carrito {
+  margin: 10px 0;
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  background: white;
+}
+@media (min-width: 550px) {
+  .card {
+    text-align: left;
+  }
+}
+.info-card {
+  padding: 10px 20px;
+}
+
+.info-card p,
+.card h4 {
+  margin-bottom: 5px;
+}
+.info-card .precio {
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.info-card .precio span {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.footer {
+  margin-top: 40px;
+  border-top: 1px solid #aaa;
+  padding-top: 40px;
+}
+.footer .menu a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
