@@ -3,8 +3,18 @@ const cart = document.querySelector('#carrito'),
   cartBody = document.querySelector('#lista-carrito tbody'),
   emptryCartBtn = document.querySelector('#vaciar-carrito'),
   courseList = document.querySelector('#lista-cursos')
+let articulosCarrito;
 
-let articulosCarrito = []
+
+function cargarCarrito() {   
+  console.log('Cargando Carrito')
+  if (localStorage.getItem('carrito')) {
+    articulosCarrito = JSON.parse(localStorage.getItem('carrito'))
+    carritoHTML()
+  } else {
+    articulosCarrito = [];
+  }
+}
 
 cargarEventListeners()
 function cargarEventListeners() {
@@ -23,8 +33,13 @@ function cargarEventListeners() {
       limpiarHTML() // mejor simplemente vaciar el HTML
     }
   })
+
+  // crear carrito
+  document.addEventListener('DOMContentLoaded', cargarCarrito)
 }
 
+
+// Functiones
 function agregarCurso(e) {
   e.preventDefault()
   console.log('Presionando en cursos')
@@ -46,6 +61,9 @@ function eliminarCurso(e) {
     carritoHTML()
 
     console.log(articulosCarrito)
+
+    // guardar cambios al carrito localStorage
+    guardarLocalStorage(articulosCarrito)
   }
 }
 
@@ -79,6 +97,9 @@ function leerDatosCurso(curso) {
     console.log(articulosCarrito)
   }
   carritoHTML()
+
+  // llamar funcion para guardar carrito al local Storage
+  guardarLocalStorage(articulosCarrito)
 }
 
 // Muestra carrito compras en HTML
@@ -120,3 +141,17 @@ function limpiarHTML() {
     cartBody.removeChild(cartBody.firstChild)
   }
 }
+
+
+// guardar al local storage
+function guardarLocalStorage(carrito) {
+  localStorage.setItem('carrito', JSON.stringify(carrito)) 
+}
+
+// cargar local storage
+function cargarLocalStorage() {
+
+}
+
+
+
